@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
+    <link rel="icon" href="./media/favicon.ico">
+    <link rel="manifest" href="./media/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+     <!-- Barra de navegación -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <!-- Imagen del logo -->
+                <img src="./media/logo.webp" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px; border-radius: 50%;">
+                <!-- Texto -->
+                Mugen-Metrics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formulario.html">Formulario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactus.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+<div class="row justify-content-center align-items-center gap-4">
+    <div class="col-12 col-md-6">
+        <h1 class="display-3">Bienvenidos a nuestro proyecto de fin de master</h1>
+        <p class="fs-5">Este es un proyecto de fin de máster que ayuda a los aficionados a los coches a encontrar los mejores datos de anuncios para sus necesidades. Hecho por aficionados para aficionados. Para los que buscan la mejor oportunidad de conseguir el coche de sus sueños hasta quien necesite un vehículo con la mejor calidad-precio.</p>
+
+        <p class="fs-5">Vamos a habilitar un formulario que permita a los usuarios buscar las características buscadas en un vehículo basándose en scrapping a Wallapop para sacar precios y a partir de ahí sacar más funciones como métricas basadas en computación en la nube para crear un dataset de motores, componentes, etc. Para analizar la fiabilidad, durabilidad, problemas comunes, etc. Para que el consumidor final tenga toda la información a su alcance.</p>
+    </div>
+    <div class="col-12 col-md-6 text-center">
+        <img src="media/index_honda.jpg" class="img-fluid w-100 img-thumbnail" alt="peña_cabarga " style="max-width: 100%; height: auto;">
+    </div>
+</div>
+
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer class="bg-secondary text-white pt-5 pb-4 mt-5">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+            <!-- Columna 1: Logo y descripción -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-light">Mugen-Metrics</h5>
+                <p class="text-muted">
+                    Tu aliado en la búsqueda de vehículos perfectos. Datos precisos, análisis detallados y herramientas avanzadas para ayudarte a tomar la mejor decisión.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces útiles -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-light">Enlaces útiles</h5>
+                <p>
+                    <a href="index.html" class="text-muted" style="text-decoration: none;">Inicio</a>
+                </p>
+                <p>
+                    <a href="aboutus.html" class="text-muted" style="text-decoration: none;">Sobre nosotros</a>
+                </p>
+                <p>
+                    <a href="formulario.html" class="text-muted" style="text-decoration: none;">Servicios</a>
+                </p>
+                <p>
+                    <a href="contactus.html" class="text-muted" style="text-decoration: none;">Contacto</a>
+                </p>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-light">Contacto</h5>
+                <p class="text-muted">
+                    <i class="fas fa-home mr-3"></i> Madrid, España
+                </p>
+                <p class="text-muted">
+                    <i class="fas fa-envelope mr-3"></i> info@mugen-Metrics.com
+                </p>
+            </div>
+
+            <!-- Columna 4: Redes sociales -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-light">Síguenos</h5>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Parte inferior -->
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="text-center text-md-left text-muted">
+                    © 2024 Mugen-Metrics. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <p class="text-center text-md-right text-muted">
+ 
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Búsqueda de Coches</title>
+    <!-- Enlace a Bootstrap -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon-16x16.png">
+    <link rel="icon" href="./media/favicon.ico">
+    <link rel="manifest" href="./media/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <!-- Imagen del logo -->
+                <img src="./media/logo.webp" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px; border-radius: 50%;">
+                <!-- Texto -->
+                Mugen-Metrics
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/formulario.html">Formulario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus.html">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactus.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Formulario de Búsqueda de Coches</h1>
+        <p>Este es un proyecto de fin de master para que todos los aficionados al mundo de los coches
+            puedan de forma mas comoda acceder a metricas que hasta ahora no existian o estaban al 
+            alcance de quienes podrian pagarlo. Con esto conseguimos una mejor indexacion de los anuncios
+            y una rápida recopilación de datos para establecer métricas mas avanzadas. 
+        </p>
+        <form action="form.php" method="post">
+            <!-- Año -->
+            <div class="mb-3">
+                <label for="yearRange" class="form-label">Año de matriculación (1940 - 2024)</label>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" id="minYear" name="min_year" placeholder="Año mínimo (1940)" min="1940" max="2024" value="1940">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" id="maxYear" name="max_year" placeholder="Año máximo (2024)" min="1940" max="2024" value="2024">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kilómetros -->
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="kmmax" class="form-label">Kilómetros minimos</label>
+                        <input type="number" class="form-control" id="minKm" name="min_km" placeholder="Kilómetros mínimos (1)" min="1" max="500000" value="1">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="kmmin" class="form-label">Kilómetros maximos</label>
+                        <input type="number" class="form-control" id="maxKm" name="max_km" placeholder="Kilómetros máximos (500.000)" min="1" max="500000" value="500000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Precio mínimo</label>
+                        <input type="number" class="form-control" id="minSalePrice" name="min_sale_price" placeholder="Precio mínimo (€) (Sin comas)" min="1" max="90000" value="1">
+                    </div>
+                    <div class="col-md-6 col">
+                        <label for="maxprice" class="form-label">Precio máximo</label>
+                        <input type="number" class="form-control" id="maxSalePrice" name="max_sale_price" placeholder="Precio máximo (€) (Sin comas)" min="1" max="90000" value="90000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Palabras clave -->
+            <div class="mb-3 lg-4">
+                <label for="keywords" class="form-label">Palabras clave</label>
+                <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Ejemplo: TypeR, M3, etc." value="">
+            </div>
+
+            <!-- Caja de cambios y Tipo de motor-->
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="gearbox" class="form-label">Tipo de caja de cambios</label>
+                        <select class="form-select" id="gearbox" name="gearbox_types">
+                            <option value="'automatic,manual'">Ambas</option>
+                            <option value="automatic">Automático</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gearbox" class="form-label">Tipo de combustible</label>
+                        <select class="form-select" id="engine" name="engine_types">
+                            <option value="both">Ambas</option>
+                            <option value="gasoline">Gasolina</option>
+                            <option value="gasoil">Gasoil</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Marca y Modelo -->
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="brand" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="brand" name="brand" placeholder="Introduce tu marca" value="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="model" class="form-label">Modelo</label>
+                        <input type="text" class="form-control" id="model" name="model" placeholder="Introduce tu modelo" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- Potencia -->
+            <div class="mb-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="max_horsepower" class="form-label">Potencia mínima</label>
+                        <input type="number" class="form-control" id="minHorsepower" name="min_horsepower" placeholder="Introduce tu potencia minima" min="1" max="1000">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="min_horsepower" class="form-label">Potencia mínima</label>
+                        <input type="number" class="form-control" id="maxHorsepower" name="max_horsepower" placeholder="Introduce la potencia máxima" min="1000" max="1000">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-5">
+                    <i class="fas fa-search me-2"></i>Buscar
+                </button>
+            </div>            
+        </form>
+    </div>
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-secondary text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <!-- Columna 1: Logo y descripción -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-light">Mugen-Metrics</h5>
+                    <p class="text-muted">
+                        Tu aliado en la búsqueda de vehículos perfectos. Datos precisos, análisis detallados y herramientas avanzadas para ayudarte a tomar la mejor decisión.
+                    </p>
+                </div>
+    
+                <!-- Columna 2: Enlaces útiles -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-light">Enlaces útiles</h5>
+                    <p>
+                        <a href="index.html" class="text-muted" style="text-decoration: none;">Inicio</a>
+                    </p>
+                    <p>
+                        <a href="aboutus.html" class="text-muted" style="text-decoration: none;">Sobre nosotros</a>
+                    </p>
+                    <p>
+                        <a href="formulario.html" class="text-muted" style="text-decoration: none;">Servicios</a>
+                    </p>
+                    <p>
+                        <a href="contactus.html" class="text-muted" style="text-decoration: none;">Contacto</a>
+                    </p>
+                </div>
+    
+                <!-- Columna 3: Contacto -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-light">Contacto</h5>
+                    <p class="text-muted">
+                        <i class="fas fa-home mr-3"></i> Madrid, España
+                    </p>
+                    <p class="text-muted">
+                        <i class="fas fa-envelope mr-3"></i> info@mugen-metrics.com
+                    </p>
+                </div>
+    
+                <!-- Columna 4: Redes sociales -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-light">Síguenos</h5>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white me-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Línea divisoria -->
+            <hr class="mb-4" style="border-color: rgba(255, 255, 255, 0.2);">
+    
+            <!-- Parte inferior -->
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-left text-muted">
+                        © 2024 Mugen-Metrics. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <p class="text-center text-md-right text-muted">
+</body>
+</html>
