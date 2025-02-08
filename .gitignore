@@ -1,3 +1,5 @@
 nginx-logs/
 datasets/
 db-mugen-metrics.archive
+mongodb/
+certbot/
